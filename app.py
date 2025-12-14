@@ -20,10 +20,10 @@ st.write("Predict whether a person's income is **>50K** or **≤50K**")
 @st.cache_resource
 def load_model():
     with open("Adult_Income.pkl", "rb") as file:
-        model = pickle.load(file)
-    return model
+        df = pickle.load(file)
+    return df
 
-model = load_model()
+df = load_model()
 
 # ---------------------------------
 # Input Fields
