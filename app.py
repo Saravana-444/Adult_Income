@@ -62,7 +62,7 @@ if st.button("Predict Income"):
             hours_per_week
         ]])
 
-        prediction = model.predict(input_data)
+        prediction = df.predict(input_data)
 
         if prediction[0] == 1:
             st.success("✅ Predicted Income: **> 50K**")
