@@ -8,7 +8,7 @@ st.title("💼 Adult Income Prediction")
 
 # Load trained model
 with open("Adult_Income.pkl", "rb") as f:
-    df = pickle.load(f)
+    model = pickle.load(f)
 
 # User inputs (ONLY NUMBERS)
 age = st.number_input("Age", min_value=18, max_value=100, value=30)
@@ -27,7 +27,7 @@ if st.button("Predict Income"):
         hours_per_week
     ]).reshape(1, -1)
 
-    prediction = df.predict(input_data)
+    prediction = model.predict(input_data)
 
     if prediction[0] == 1:
         st.success("💰 Income > 50K")
