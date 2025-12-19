@@ -7,7 +7,7 @@ st.set_page_config(page_title="Adult Income Prediction")
 st.title("💼 Adult Income Prediction")
 
 # Load trained model
-with open("adult_income_model.pkl", "rb") as f:
+with open("Adult_Income.pkl", "rb") as f:
     df = pickle.load(f)
 
 # User inputs (ONLY NUMBERS)
